@@ -442,6 +442,7 @@ SourceFileManager.prototype.scan = function () {
 
     this.directories.forEach(function (dir) {
         console.log('Scanning source files: ' + dir);
+        // FIXME
         try {
             recursiveReadSync(dir).forEach(function (fn) {
                 var absFn = path.normalize(path.join(dir, fn));   // './foo/bar.js' -> 'foo/bar.js'
